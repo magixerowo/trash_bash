@@ -1,0 +1,20 @@
+#occurance counter
+def count_substring(string, sub_string):
+    str = int(string.find(sub_string)) # 2
+    occ = 0
+
+    for i in range(0, len(string)):
+        if str == (-1):
+            break
+        else:
+            string = string[str + 1:]
+            occ += 1
+            str = int(string.find(sub_string))
+    return occ
+
+if __name__ == '__main__':
+    string, sub_string = "TESTTESTTENTEST"
+    sub_string = "TEST"
+
+    count = count_substring(string, sub_string)
+    print(count)
